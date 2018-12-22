@@ -5,7 +5,7 @@
  * @param chunk_size {Integer} Size of every group
  */
 
-const chunkArray1 = (myArray, chunkSize) => {
+function chunkArray1 (myArray, chunkSize) {
   let index = 0
   const arrayLength = myArray.length
   const tempArray = []
@@ -15,10 +15,6 @@ const chunkArray1 = (myArray, chunkSize) => {
   }
   return tempArray
 }
-
-var result1 = chunkArray1([1, 2, 3, 4, 5, 6, 7, 8], 3)
-// Outputs : [ [1,2,3] , [4,5,6] ,[7,8] ]
-console.log(result1)
 
 /**
  * Returns an array with arrays of the given size.
@@ -35,7 +31,5 @@ function chunkArray2 (myArray, chunkSize) {
   return results
 }
 
-// Split in group of 3 items
-var result2 = chunkArray2([1, 2, 3, 4, 5, 6, 7, 8], 3)
-// Outputs : [ [1,2,3] , [4,5,6] ,[7,8] ]
-console.log(result2)
+module.exports = chunkArray1
+module.exports = chunkArray2
