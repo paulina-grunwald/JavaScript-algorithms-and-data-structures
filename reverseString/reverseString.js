@@ -1,7 +1,7 @@
 /**
  *  Given a string, return a new string with the reversed
  *  order of characters e.g reverse('big') === 'gib'
- * @param str {String} string to reverse
+ * @param string {String} string to reverse
  *
  */
 
@@ -17,5 +17,11 @@ function reverse2 (string) {
   return reversed
 }
 
+function reverse3 (string) {
+  return string.split('').reduce((reversed, char) =>
+    char + reversed, '')
+}
+
 module.exports = reverse
 module.exports = reverse2
+module.exports = reverse3
